@@ -7,5 +7,18 @@ Challenge: Create an Image Uploader application. Use any front-end libraries of 
     [ ] User story: I can see a loader when uploading
     [ ] User story: When the image is uploaded, I can see the image and copy it
     [ ] User story: I can choose to copy to the clipboard
+    [x] Create API to upload images
+    [ ] Change fileName name on upload
 
 Icon: https://google.github.io/material-design-icons/
+
+# Created using the following technologies
+
+- [Typescript](https://www.typescriptlang.org/)
+- [Adonis JS](https://docs.adonisjs.com/)
+- [React](https://reactjs.org/) with [Vite](https://vitejs.dev/guide/#community-templates)`react-ts` custom template
+- [Cloudinary](https://cloudinary.com/) for images upload
+
+## Resources
+
+- [Image Upload ](https://dev.to/massivebrains/image-or-file-uploads-in-adonis-js-with-cloudinary-1b1g)

@@ -19,7 +19,37 @@
 */
 
 import Route from "@ioc:Adonis/Core/Route";
+import Application from "@ioc:Adonis/Core/Application";
+import { cloudinary } from "App/Services/Cloudinary";
 
 Route.get("/", async () => {
   return { hello: "world" };
+});
+
+Route.post("/upload", async ({ request, response }) => {
+  const image = request.file("image", {
+    size: "5mb",
+    extnames: ["jpg", "png"],
+  });
+
+  if (!image) {
+    return response.status(404).send({ error: "Not found" });
+  }
+
+  if (!image.isValid) {
+    return response.status(422).send(image.errors);
+  }
+
+  await image.move(Application.tmpPath("uploads"));
+
+  if (image.fileName) {
+    try {
+      const cloudinaryResponse = await cloudinary.uploader.upload(
+        `${Application.tmpPath("uploads")}/${image.fileName}`
+      );
+      return response.send(cloudinaryResponse);
+    } catch (error) {
+      return response.status(500).send({ error });
+    }
+  }
 });
