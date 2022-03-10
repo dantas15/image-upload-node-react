@@ -1,11 +1,7 @@
-import { Done } from '@mui/icons-material';
 import {
   Box,
-  Button,
   Card,
   Container,
-  ImageList,
-  ImageListItem,
   LinearProgress,
   Typography,
 } from '@mui/material';
@@ -32,15 +28,6 @@ function App() {
           flexDirection: 'column',
         }}
       >
-        {isUploading && (
-          <Box sx={{ width: '100%' }}>
-            <Typography component="h1" variant="h6">
-              Uploading...
-            </Typography>
-            <LinearProgress />
-          </Box>
-        )}
-
         {!previewImage && !isUploading && (
           <>
             <Typography component="h1" variant="h6">
@@ -56,6 +43,15 @@ function App() {
               setPreviewImage={setPreviewImage}
             />
           </>
+        )}
+
+        {isUploading && (
+          <Box sx={{ width: '100%' }}>
+            <Typography component="h1" variant="h6">
+              Uploading...
+            </Typography>
+            <LinearProgress />
+          </Box>
         )}
 
         {previewImage && !isUploading && (
