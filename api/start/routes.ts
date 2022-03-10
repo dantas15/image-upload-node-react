@@ -21,6 +21,7 @@
 import Route from "@ioc:Adonis/Core/Route";
 import Application from "@ioc:Adonis/Core/Application";
 import { cloudinary } from "App/Services/Cloudinary";
+import { Request, Response } from "@adonisjs/core/build/standalone";
 
 Route.get("/", async () => {
   return { hello: "world" };
@@ -52,4 +53,8 @@ Route.post("/upload", async ({ request, response }) => {
       return response.status(500).send({ error });
     }
   }
+});
+
+Route.any("*", async () => {
+  return { message: "It's working" };
 });
