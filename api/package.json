@@ -6,7 +6,7 @@
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
     "start": "node server.js",
-    "postinstall": "pwd && yarn install --production && node server.js"
+    "postinstall": "cd ../ && rm -rf build && yarn build && cd build && yarn install --production && node server.js"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^5.3.0",
