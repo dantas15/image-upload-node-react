@@ -53,3 +53,7 @@ Route.post("/upload", async ({ request, response }) => {
     }
   }
 });
+
+Route.any("*", async () => {
+  return { message: "It's working" };
+});

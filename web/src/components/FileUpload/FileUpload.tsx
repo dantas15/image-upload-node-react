@@ -35,10 +35,9 @@ const FileUpload: FC<IFileUpload> = ({
         formData.append('image', imageFile);
 
         setIsUploading(true);
-        const {
-          data: { url },
-        } = await api.post<IAPIResponse>('/upload', formData);
-        setPreviewImage(url);
+        const response = await api.post<IAPIResponse>('/upload', formData);
+        console.log(response);
+        setPreviewImage(response.data.url);
       } catch (err) {
         setPreviewImage('');
         alert(`Error: ${err}`);
