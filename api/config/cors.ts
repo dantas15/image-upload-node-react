@@ -20,10 +20,7 @@ const corsConfig: CorsConfig = {
   | you can define a function to enable/disable it on per request basis as well.
   |
   */
-  enabled: (request) =>
-    request
-      .completeUrl()
-      .startsWith("https://gusgalote-image-upload.netlify.app"),
+  enabled: true,
 
   // You can also use a function that return true or false.
   // enabled: (request) => request.url().startsWith('/api')
