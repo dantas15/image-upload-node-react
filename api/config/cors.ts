@@ -47,7 +47,7 @@ const corsConfig: CorsConfig = {
   |                     one of the above values.
   |
   */
-  origin: true,
+  origin: ["https://gusgalote-image-upload.netlify.app"],
 
   /*
   |--------------------------------------------------------------------------

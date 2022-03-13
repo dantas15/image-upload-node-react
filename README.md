@@ -1,13 +1,15 @@
 # Image Upload
 
+- Available @ https://gusgalote-image-upload.netlify.app/
+
 Challenge: Create an Image Uploader application. Use any front-end libraries of your choice. Create your API. Don’t look at the existing solution. Fulfill user stories below:
 
-    [x] User story: I can drag and drop an image to upload it
-    [x] User story: I can choose to select an image from my folder
-    [x] User story: I can see a loader when uploading
-    [x] User story: When the image is uploaded, I can see the image and copy it
-    [x] User story: I can choose to copy to the clipboard
-    [x] Create API to upload images
+      [x] User story: I can drag and drop an image to upload it
+      [x] User story: I can choose to select an image from my folder
+      [x] User story: I can see a loader when uploading
+      [x] User story: When the image is uploaded, I can see the image and copy it
+      [x] User story: I can choose to copy to the clipboard
+      [x] Create API to upload images
 
 Icon: https://google.github.io/material-design-icons/
 
@@ -15,7 +17,7 @@ Icon: https://google.github.io/material-design-icons/
 
 - [Typescript](https://www.typescriptlang.org/)
 - [Adonis JS](https://docs.adonisjs.com/)
-- [React](https://reactjs.org/) with [Vite](https://vitejs.dev/guide/#community-templates)`react-ts` custom template
+- [React](https://reactjs.org/) and [Vite](https://vitejs.dev/guide/#community-templates)
 - [Cloudinary](https://cloudinary.com/) for images upload
 
 ## Resources
