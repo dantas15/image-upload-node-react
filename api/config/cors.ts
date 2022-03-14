@@ -21,15 +21,7 @@ const corsConfig: CorsConfig = {
   | you can define a function to enable/disable it on per request basis as well.
   |
   */
-  enabled: (request) => {
-    if (Env.get("NODE_ENV") === "production") {
-      return request
-        .completeUrl()
-        .startsWith("https://gusgalote-image-upload.netlify.app");
-    } else {
-      return true;
-    }
-  },
+  enabled: true,
 
   // You can also use a function that return true or false.
   // enabled: (request) => request.url().startsWith('/api')
