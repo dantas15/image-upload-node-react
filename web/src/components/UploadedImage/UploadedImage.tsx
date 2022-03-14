@@ -22,7 +22,8 @@ const UploadedImage: FC<IUploadedImage> = ({ previewImage }) => {
           src={previewImage}
           alt="Uploaded"
           style={{
-            width: '100%',
+            minWidth: '100%',
+            maxHeight: '400px',
             objectFit: 'cover',
             borderRadius: 10,
           }}

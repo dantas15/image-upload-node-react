@@ -90,10 +90,7 @@ const FileUpload: FC<IFileUpload> = ({
         onDragOver={handleDragOver}
         onDrop={handleOnDrop}
       >
-        <Typography
-          variant="body2"
-          sx={{ margin: '1.5rem 0', color: 'GrayText' }}
-        >
+        <Typography variant="body2" sx={{ color: 'GrayText' }}>
           Drag 'n' Drop your images here
         </Typography>
       </Box>
